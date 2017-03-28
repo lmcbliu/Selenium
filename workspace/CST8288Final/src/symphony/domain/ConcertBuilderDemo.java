@@ -1,4 +1,4 @@
-package concert;
+package symphony.domain;
 
 
 import javafx.application.Application;
