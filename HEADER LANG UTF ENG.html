@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www-qa.ic.gc.ca/" />
+<title>HEADER LANG UTF</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">HEADER LANG UTF</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=.//title</td>
+	<td>title</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['title']&gt;0</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=.//title[contains(text(), ' - ')]</td>
+	<td>titledivider</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['titledivider']&gt;0</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=.//head/meta@charset</td>
+	<td>charset</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['charset']=='UTF-8' || storedVars['charset']=='utf-8' </td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=.//html@lang</td>
+	<td>lang</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['lang']=='en'</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//head/meta[contains(@content, 'eng')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//i</td>
+	<td>count_No_Italic</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['count_No_Italic']==0</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=.//head/meta[contains(@content, 'TODO')]</td>
+	<td>count_TODO</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['count_TODO']==0</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=.//*[@class='breadcrumb']/li</td>
+	<td>count_Breadcrumb_li</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['count_Breadcrumb_li']==6</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=.//*[@class='breadcrumb']/li/a</td>
+	<td>count_Breadcrumb_a</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['count_Breadcrumb_a']==(storedVars.count_Breadcrumb_li - 1)</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=.//*[@class='breadcrumb']/li/a[contains(@href, &quot;&quot;)]</td>
+	<td>count_href</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['count_href']==storedVars['count_Breadcrumb_a']</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=.//head/meta[contains(@content, 'é')]</td>
+	<td>count_French_Chars</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['count_French_Chars']==0</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Skip to main content</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Skip to &quot;About this site&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Skip to section menu</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//*[@id='wb-tphp']/li[1]/a[contains(@href, '#wb-cont')]</td>
+	<td>Skip to main content</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//*[@id='wb-tphp']/li[2]/a[contains(@href, '#wb-info')]</td>
+	<td>Skip to &quot;About this site&quot;</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//*[@id='wb-tphp']/li[3]/a[contains(@href, '#wb-sec')]</td>
+	<td>Skip to section menu</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//*[@id='wb-tphp']/li[4]/a[contains(@href, 'wbdisable=true')]</td>
+	<td>Switch to basic HTML version</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='wb-tphp']/li[4]/a[contains(@href, 'wbdisable=true')]</td>
+	<td>Switch to basic HTML version</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Skip to main content</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Skip to &quot;About this site&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Skip to section menu</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//*[@id='wb-tphp']/li[1]/a[contains(@href, '#wb-cont')]</td>
+	<td>Skip to main content</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//*[@id='wb-tphp']/li[2]/a[contains(@href, '#wb-info')]</td>
+	<td>Skip to &quot;About this site&quot;</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//*[@id='wb-tphp']/li[3]/a[contains(@href, '#wb-sec')]</td>
+	<td>Skip to section menu</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=.//*[@id='wb-tphp']/li[4]/a[contains(@href, 'wbdisable=false')]</td>
+	<td>Switch to standard version</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=.//*[@id='wb-tphp']/li[4]/a[contains(@href, 'wbdisable=false')]</td>
+	<td>Switch to standard version</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//span/strong[contains(text(),'(required)')]</td>
+	<td>count_required</td>
+</tr>
+</tbody></table>
+</body>
+</html>
